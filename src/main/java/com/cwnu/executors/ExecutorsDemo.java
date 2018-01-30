@@ -19,8 +19,11 @@ public class ExecutorsDemo {
         });
 
 
+        //没加shutdown之前这里会有一个 thread group的概念，也就是在同一个group中任何线程只要还没执行完毕，
+        //其他线程都会阻塞在那里。
+
 
         // blocking task就会shutdown，main thread也可以退出
-        executorService.shutdown();
+        //executorService.shutdown();
     }
 }
